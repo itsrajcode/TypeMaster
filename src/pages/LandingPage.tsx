@@ -30,12 +30,12 @@ const LandingPage = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
+          <div className="flex items-center justify-center mb-6 ">
             <div className="relative">
-              <Sparkles className="w-16 h-16 text-purple-600 dark:text-purple-400" />
+              <Sparkles className="w-12 h-12 lg:w-16 lg:h-16  text-purple-600 dark:text-purple-400" />
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse" />
             </div>
-            <h1 className="text-6xl font-bold ml-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400">
+            <h1 className="text-5xl lg:text-6xl font-bold ml-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400">
               TypeMaster
             </h1>
           </div>
