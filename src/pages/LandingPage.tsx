@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Activity, Clock, Trophy, Sparkles } from 'lucide-react';
+import { Activity, Clock, Trophy, Sparkles, Github} from 'lucide-react';
 import FeatureCard from '../components/FeatureCard';
 
 const features = [
@@ -42,7 +42,7 @@ const LandingPage = () => {
           <p className="text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Master the art of typing with real-time analytics and personalized insights
           </p>
-          <div className="space-x-4">
+          <div className="flex items-center justify-center gap-8 flex-col sm:flex-row">
             <button
               onClick={() => navigate('/practice')}
               className="bg-purple-600 dark:bg-purple-500 text-white px-8 py-3 rounded-lg 
@@ -52,12 +52,13 @@ const LandingPage = () => {
               Start Typing Test
             </button>
             <button
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/itsrajcode/TypeMaster', '_blank')}
               className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 
                 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-200 
-                dark:hover:bg-gray-700 transition-all"
+                dark:hover:bg-gray-700 transition-all flex gap-2"
             >
-              Learn More
+              <Github className="w-6 h-6" />
+              Github
             </button>
           </div>
         </div>

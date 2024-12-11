@@ -49,5 +49,55 @@ export const practiceTexts = [
     id: 10,
     category: "Innovation",
     text: `Breakthrough innovations often come from combining existing ideas in novel ways. The smartphone revolutionized communication by integrating computing, photography, and telecommunications. Such convergence of technologies continues to create new possibilities in our digital age.`
+  },
+  {
+    id: 11,
+    category: "Health",
+    text: "Nutrition plays a vital role in maintaining overall health and well-being. A balanced diet rich in fruits, vegetables, and whole grains can help prevent chronic diseases and promote longevity. Understanding the nutritional value of foods empowers individuals to make healthier choices."
+  },
+  {
+    id: 12,
+    category: "Art",
+    text: "Art is a powerful medium of expression that transcends cultural and linguistic barriers. From the vibrant colors of Impressionism to the abstract forms of Modernism, art reflects the diverse perspectives and emotions of its creators. It invites viewers to explore new dimensions of thought and feeling."
+  },
+  {
+    id: 13,
+    category: "Economics",
+    text: "The global economy is a complex system influenced by numerous factors, including trade policies, technological advancements, and geopolitical events. Understanding economic principles such as supply and demand, inflation, and fiscal policy is crucial for making informed financial decisions."
+  },
+  {
+    id: 14,
+    category: "Psychology",
+    text: "Psychology explores the intricacies of human behavior and mental processes. It seeks to understand how individuals perceive, think, and interact with the world around them. Insights from psychology can improve mental health care, enhance education, and foster better interpersonal relationships."
+  },
+  {
+    id: 15,
+    category: "Music",
+    text: "Music is a universal language that resonates with people across cultures and generations. It has the power to evoke emotions, tell stories, and bring communities together. From classical symphonies to contemporary pop hits, music enriches our lives and inspires creativity."
+  },
+  {
+    id: 16,
+    category: "Travel",
+    text: "Traveling opens the door to new experiences and perspectives. Exploring different cultures, cuisines, and landscapes broadens our understanding of the world and fosters a sense of adventure. Whether it's a weekend getaway or a journey across continents, travel enriches the soul."
+  },
+  {
+    id: 17,
+    category: "Education",
+    text: "Education is the cornerstone of personal and societal development. It empowers individuals with knowledge and skills, enabling them to contribute meaningfully to their communities. Lifelong learning is essential in an ever-changing world, where adaptability and innovation are key."
+  },
+  {
+    id: 18,
+    category: "Sports",
+    text: "Sports promote physical fitness, teamwork, and discipline. They offer a platform for athletes to showcase their talents and inspire others. From the thrill of competition to the joy of victory, sports bring people together and create lasting memories."
+  },
+  {
+    id: 19,
+    category: "Technology",
+    text: "Blockchain technology is revolutionizing industries by providing secure and transparent transactions. Its decentralized nature eliminates the need for intermediaries, reducing costs and increasing efficiency. As blockchain continues to evolve, its potential applications are vast and varied."
+  },
+  {
+    id: 20,
+    category: "History",
+    text: "The Industrial Revolution marked a turning point in history, transforming economies and societies. It introduced new technologies and manufacturing processes, leading to urbanization and changes in labor dynamics. The impact of this era is still felt in modern industrial practices."
   }
 ];
