@@ -1,4 +1,4 @@
-import { practiceTexts } from '../data/practiceTexts';
+import { practiceTexts, PracticeText, DifficultyLevel } from '../data/practiceTexts';
 
 class TextService {
   private static instance: TextService;
@@ -13,26 +13,32 @@ class TextService {
     return TextService.instance;
   }
 
-  getRandomText(): { category: string; text: string } {
-    // Reset used texts if all have been used
-    if (this.usedTextIds.size === practiceTexts.length) {
-      this.usedTextIds.clear();
+  getRandomText(difficulty?: DifficultyLevel): PracticeText {
+    // Filter texts by difficulty if specified
+    const matchingPool = difficulty
+      ? practiceTexts.filter(t => t.difficulty === difficulty)
+      : practiceTexts;
+
+    // Reset used texts for this pool if all have been used
+    const poolIds = new Set(matchingPool.map(t => t.id));
+    const usedInPool = [...this.usedTextIds].filter(id => poolIds.has(id));
+
+    if (usedInPool.length >= matchingPool.length) {
+      for (const id of usedInPool) {
+        this.usedTextIds.delete(id);
+      }
     }
 
     // Filter out used texts
-    const availableTexts = practiceTexts.filter(text => !this.usedTextIds.has(text.id));
-    
-    // Get random text from available ones
-    const randomIndex = Math.floor(Math.random() * availableTexts.length);
-    const selectedText = availableTexts[randomIndex];
-    
-    // Mark as used
-    this.usedTextIds.add(selectedText.id);
-    
-    return {
-      category: selectedText.category,
-      text: selectedText.text
-    };
+    const available = matchingPool.filter(t => !this.usedTextIds.has(t.id));
+    const targetPool = available.length > 0 ? available : matchingPool;
+
+    const randomIndex = Math.floor(Math.random() * targetPool.length);
+    const selected = targetPool[randomIndex];
+
+    this.usedTextIds.add(selected.id);
+
+    return selected;
   }
 }
 

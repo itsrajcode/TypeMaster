@@ -1,103 +1,106 @@
-// Collection of practice texts with varying themes and difficulties
-export const practiceTexts = [
+export type DifficultyLevel = 'easy' | 'medium' | 'hard';
+
+export interface PracticeText {
+  id: number;
+  category: string;
+  difficulty: DifficultyLevel;
+  text: string;
+}
+
+export const practiceTexts: PracticeText[] = [
+  // ── EASY MODE (Simple vocabulary, smooth rhythm, 20-35 words) ──
   {
-    id: 1,
-    category: "Technology",
-    text: `Artificial intelligence and machine learning are revolutionizing the way we interact with technology. From smart assistants to autonomous vehicles, these innovations are shaping our future in unprecedented ways. As we continue to advance, the ethical implications of AI development become increasingly important to consider.`
+    id: 101,
+    category: "Daily Life",
+    difficulty: "easy",
+    text: "The sun rose gently over the calm green hills, bringing warmth and light to the quiet town below. Birds sang sweet morning songs from the tall oak trees."
   },
   {
-    id: 2,
+    id: 102,
     category: "Nature",
-    text: `The Amazon rainforest, often called the Earth's lungs, produces about 20% of the world's oxygen. This vast ecosystem is home to millions of species, many still undiscovered. The intricate web of life within the rainforest demonstrates nature's remarkable ability to create perfect balance and harmony.`
+    difficulty: "easy",
+    text: "A clean river flows through the quiet forest, carrying fresh cool water down to the blue ocean. Fish swim happily among the smooth grey river stones."
   },
   {
-    id: 3,
-    category: "Literature",
-    text: `In the realm of classic literature, each word carefully chosen paints vivid pictures in our minds. The power of storytelling transcends time, connecting readers across generations through shared human experiences. Great books have the unique ability to transform our perspective and expand our understanding of the world.`
+    id: 103,
+    category: "Motivation",
+    difficulty: "easy",
+    text: "Every small step you take each day brings you closer to your biggest dreams. Keep your focus clear, stay positive, and never stop learning new things."
   },
   {
-    id: 4,
-    category: "Science",
-    text: `Quantum physics challenges our fundamental understanding of reality. The concept of quantum entanglement suggests that particles can be connected in ways that defy classical physics. Einstein famously called this phenomenon "spooky action at a distance," highlighting the mysterious nature of quantum mechanics.`
+    id: 104,
+    category: "Friendship",
+    difficulty: "easy",
+    text: "True friends stand beside you through sunny days and stormy nights. A kind word or a warm smile can easily brighten someone's entire day."
   },
   {
-    id: 5,
-    category: "History",
-    text: `The Renaissance period marked a revolutionary change in art, science, and human thought. Brilliant minds like Leonardo da Vinci and Michelangelo pushed the boundaries of human creativity and innovation. This cultural rebirth laid the foundation for many modern ideas and scientific methods.`
+    id: 105,
+    category: "Adventure",
+    difficulty: "easy",
+    text: "Pack your bag, lace up your shoes, and take the first step on an exciting journey. The wide world is full of wonderful places waiting to be explored."
   },
+
+  // ── MEDIUM MODE (Balanced paragraphs, 40-55 words) ──
   {
-    id: 6,
-    category: "Programming",
-    text: `Clean code is not just about making the code work. It's about crafting software that is readable, maintainable, and scalable. Good programmers write code that humans can understand, following principles like DRY (Don't Repeat Yourself) and SOLID to create robust applications.`
-  },
-  {
-    id: 7,
-    category: "Space",
-    text: `The James Webb Space Telescope peers deeper into space than ever before, revealing ancient galaxies and stellar nurseries. Its infrared capabilities allow us to see through cosmic dust clouds, unveiling the mysteries of star formation and potentially habitable exoplanets.`
-  },
-  {
-    id: 8,
-    category: "Philosophy",
-    text: `The pursuit of wisdom has driven human thought for millennia. Ancient philosophers like Socrates taught us to question our assumptions and seek truth through rational inquiry. Their methods of critical thinking and logical reasoning remain relevant in our modern world.`
-  },
-  {
-    id: 9,
-    category: "Environment",
-    text: `Climate change presents one of the greatest challenges of our time. Rising global temperatures affect weather patterns, ecosystems, and human societies worldwide. The transition to renewable energy and sustainable practices has become crucial for our planet's future.`
-  },
-  {
-    id: 10,
-    category: "Innovation",
-    text: `Breakthrough innovations often come from combining existing ideas in novel ways. The smartphone revolutionized communication by integrating computing, photography, and telecommunications. Such convergence of technologies continues to create new possibilities in our digital age.`
-  },
-  {
-    id: 11,
-    category: "Health",
-    text: "Nutrition plays a vital role in maintaining overall health and well-being. A balanced diet rich in fruits, vegetables, and whole grains can help prevent chronic diseases and promote longevity. Understanding the nutritional value of foods empowers individuals to make healthier choices."
-  },
-  {
-    id: 12,
-    category: "Art",
-    text: "Art is a powerful medium of expression that transcends cultural and linguistic barriers. From the vibrant colors of Impressionism to the abstract forms of Modernism, art reflects the diverse perspectives and emotions of its creators. It invites viewers to explore new dimensions of thought and feeling."
-  },
-  {
-    id: 13,
-    category: "Economics",
-    text: "The global economy is a complex system influenced by numerous factors, including trade policies, technological advancements, and geopolitical events. Understanding economic principles such as supply and demand, inflation, and fiscal policy is crucial for making informed financial decisions."
-  },
-  {
-    id: 14,
-    category: "Psychology",
-    text: "Psychology explores the intricacies of human behavior and mental processes. It seeks to understand how individuals perceive, think, and interact with the world around them. Insights from psychology can improve mental health care, enhance education, and foster better interpersonal relationships."
-  },
-  {
-    id: 15,
-    category: "Music",
-    text: "Music is a universal language that resonates with people across cultures and generations. It has the power to evoke emotions, tell stories, and bring communities together. From classical symphonies to contemporary pop hits, music enriches our lives and inspires creativity."
-  },
-  {
-    id: 16,
-    category: "Travel",
-    text: "Traveling opens the door to new experiences and perspectives. Exploring different cultures, cuisines, and landscapes broadens our understanding of the world and fosters a sense of adventure. Whether it's a weekend getaway or a journey across continents, travel enriches the soul."
-  },
-  {
-    id: 17,
-    category: "Education",
-    text: "Education is the cornerstone of personal and societal development. It empowers individuals with knowledge and skills, enabling them to contribute meaningfully to their communities. Lifelong learning is essential in an ever-changing world, where adaptability and innovation are key."
-  },
-  {
-    id: 18,
-    category: "Sports",
-    text: "Sports promote physical fitness, teamwork, and discipline. They offer a platform for athletes to showcase their talents and inspire others. From the thrill of competition to the joy of victory, sports bring people together and create lasting memories."
-  },
-  {
-    id: 19,
+    id: 201,
     category: "Technology",
-    text: "Blockchain technology is revolutionizing industries by providing secure and transparent transactions. Its decentralized nature eliminates the need for intermediaries, reducing costs and increasing efficiency. As blockchain continues to evolve, its potential applications are vast and varied."
+    difficulty: "medium",
+    text: "Artificial intelligence and machine learning are revolutionizing the way we interact with technology. From smart assistants to autonomous vehicles, these innovations are shaping our future in unprecedented ways as we advance into a connected world."
   },
   {
-    id: 20,
-    category: "History",
-    text: "The Industrial Revolution marked a turning point in history, transforming economies and societies. It introduced new technologies and manufacturing processes, leading to urbanization and changes in labor dynamics. The impact of this era is still felt in modern industrial practices."
+    id: 202,
+    category: "Nature",
+    difficulty: "medium",
+    text: "The Amazon rainforest, often called the Earth's lungs, produces about twenty percent of the world's oxygen. This vast ecosystem is home to millions of species, demonstrating nature's remarkable ability to create balance and lasting harmony."
+  },
+  {
+    id: 203,
+    category: "Literature",
+    difficulty: "medium",
+    text: "In the realm of classic literature, each carefully chosen word paints vivid pictures in our minds. The power of storytelling transcends time, connecting readers across generations through shared human experiences and imaginative journeys."
+  },
+  {
+    id: 204,
+    category: "Space",
+    difficulty: "medium",
+    text: "The James Webb Space Telescope peers deeper into space than ever before, revealing ancient galaxies and stellar nurseries. Its infrared sensors allow astronomers to see through cosmic dust clouds and observe distant habitable exoplanets."
+  },
+  {
+    id: 205,
+    category: "Programming",
+    difficulty: "medium",
+    text: "Clean code is not just about making a program work. It is about crafting software that is readable, maintainable, and scalable. Good developers write code that humans can understand, following clean architectural principles."
+  },
+
+  // ── HARD MODE (Advanced vocabulary, complex syntax, 60-80 words) ──
+  {
+    id: 301,
+    category: "Quantum Physics",
+    difficulty: "hard",
+    text: "Quantum physics challenges our fundamental understanding of reality. The concept of quantum entanglement suggests that microscopic particles can remain instantaneously correlated across macroscopic distances, defying conventional classical physics and prompting Einstein to famously designate the phenomenon as spooky action at a distance."
+  },
+  {
+    id: 302,
+    category: "Philosophy",
+    difficulty: "hard",
+    text: "Epistemological inquiry encourages thinkers to systematically interrogate foundational presuppositions regarding human cognition and empirical perception. Through rigorous dialectical argumentation, ancient philosophers dismantled cognitive dogmatism and established comprehensive methodological frameworks for modern analytical skepticism."
+  },
+  {
+    id: 303,
+    category: "Software Architecture",
+    difficulty: "hard",
+    text: "Distributed asynchronous architectures demand fault-tolerant consensus protocols, idempotent message brokers, and deterministic replication topologies. Engineering high-throughput microservices requires meticulous synchronization primitives, non-blocking input-output pipelines, and proactive circuit breakers to effectively mitigate catastrophic cascading network failures."
+  },
+  {
+    id: 304,
+    category: "Biochemistry",
+    difficulty: "hard",
+    text: "Ribosomal macromolecular complexes orchestrate high-fidelity enzymatic translation of messenger ribonucleic acid templates into dynamic polymorphic polypeptide conformations, regulated by stereochemical affinity thresholds and post-translational mitochondrial phosphorylation cascades."
+  },
+  {
+    id: 305,
+    category: "Economics",
+    difficulty: "hard",
+    text: "Macroeconomic equilibrium fluctuates continuously under the multifaceted pressures of sovereign debt obligations, algorithmic liquidity arbitrage, fractional-reserve monetary expansion, and cross-border currency volatility governed by geopolitical realignment."
   }
 ];

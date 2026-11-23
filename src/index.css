@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-400 dark:bg-purple-600 rounded-full;
+  }
+}
+
+@layer utilities {
+  /* Tabular numbers for smooth stat updates */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
