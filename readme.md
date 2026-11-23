@@ -65,7 +65,7 @@ Choose a difficulty  →  Type the course  →  Race the bots  →  Study your r
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/itsrajcode/TypeMaster.git
 cd TypeMaster
 npm install
 ```
